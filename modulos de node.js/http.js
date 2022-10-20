@@ -1,10 +1,10 @@
 const http = require("http");
-
+const colors = require("colors")
 const server = http.createServer((req, res) => {
   console.log(req.url);
 
   if (req.url === "/") {
-    res.write("<h1>Welcome to the server</h1>");
+    res.write("<h1>Welcome to the server perras</h1>");
     return res.end();
   }
 
@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
     return res.end();
   }
   res.write(`
-    <h1>Not Found</h1>
+    <h1>Not Found</h1> 
     <p>Esta pagina no se encontró</p>
     <a href="/">Volver a la pagina principal</a>
     `);
@@ -22,4 +22,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000);
 
-console.log("Servidor escuchando en el puerto 3000");
+console.log("Servidor escuchando en el puerto 3000".green);
