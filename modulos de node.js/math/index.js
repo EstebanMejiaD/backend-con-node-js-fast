@@ -22,7 +22,7 @@ function divide(x, y) {
 }
 
 
-module.exports = {
+export default {
     add,
     subtract,
     multiply,
